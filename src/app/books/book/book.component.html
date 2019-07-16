@@ -1,0 +1,22 @@
+<h3 class="subtitle tile bg--cyan color--white no-margin-vertical">
+  {{book.title}}
+</h3>
+
+<table>
+  <thead>
+  <tr class="table-header">
+    <td>Auteur</td>
+    <td>Prijs</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{book.author}}</td>
+    <td>{{book.price | currency: 'EUR' }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <img [src]="book.img" class="g--12">
+</div>
