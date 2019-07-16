@@ -8,7 +8,7 @@
   <div class="card g--4 g-s--12">
 
     <!-- Start ShelveComponent -->
-    <ibs-shelf [books]="books"
+    <ibs-shelf [books]="books | async"
                (selectBook)="onSelectBook($event)"></ibs-shelf>
     <!-- End ShelveComponent -->
 
