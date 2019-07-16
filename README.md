@@ -11,6 +11,4 @@ Run `npm test` to start the unit tests with `Karma`. It will watch the files and
 ## Tooling
 There are some tool available that will help with building Angular applications.
 
-### Augury
-Augury is a browser extension for Chrome that helps you inspect the current state of an Angular application.
-[Download](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd?hl=en)
+###
