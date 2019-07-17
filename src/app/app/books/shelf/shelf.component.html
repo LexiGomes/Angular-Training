@@ -1,0 +1,9 @@
+<div class="tile no-pad no-margin"><h3 class="subtitle no-margin-vertical"> Shelve </h3></div>
+<ul class="no-pad no-margin">
+  <li *ngFor="let book of books">
+    <button class="g--12 no-margin btn--raised bg--carrot"
+            (click)="onSelect(book)">
+      {{book.title}}
+    </button>
+  </li>
+</ul>

@@ -1,0 +1,39 @@
+<div class="card">
+  <h3> New book </h3>
+
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <div class="g--12">
+      <div class="container">
+        <label for="title" class="g--4 no-margin"> Title </label>
+        <input  formControlName="title" type="text" id="title" class="g--8 no-margin">
+      </div>
+      <!-- error message -->
+      <span *ngIf="title.invalid && title.dirty" class="g--8 m--4 color--alizarin">Title is required.</span>
+    </div>
+
+    <div class="g--12">
+      <div class="container">
+
+        <label for="author" class="g--4 no-margin"> Author </label>
+        <input formControlName="author" type="text" id="author" class="g--8 no-margin">
+      </div>
+      <!-- error message -->
+      <span *ngIf="author.invalid && author.dirty" class="g--8 m--4 color--alizarin"></span>
+    </div>
+
+    <div class="g--12 container no-margin">
+      <label for="genre" class="g--4"> Genre </label>
+      <select formControlName="genre" id="genre" class="g--8">
+        <option [ngValue]="null" disabled>Pick a genre.</option>
+        <option *ngFor="let genre of bookGenres">{{genre}}</option>
+      </select>
+    </div>
+
+    <div class="g--12 container no-margin">
+      <label for="reserved" class="g--4"> Reserved </label>
+      <input formControlName="reserved" type="checkbox" id="reserved"/>
+    </div>
+
+    <button type="submit" class="btn--raised g--6 m--6 font-rem"> Add </button>
+  </form>
+</div>
