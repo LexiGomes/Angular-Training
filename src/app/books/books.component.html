@@ -1,14 +1,14 @@
 <!-- Start BooksComponent -->
 
 <!-- Start NewBookComponent -->
-
+<!-- <ibs-new-book (bookFormValue)="onAddBook($event)"></ibs-new-book>-->
 <!-- End NewBookComponent -->
 
 <div class="container--wrap--m">
   <div class="card g--4 g-s--12">
 
     <!-- Start ShelveComponent -->
-    <ibs-shelf [books]="books"
+    <ibs-shelf [books]="books | async"
                (selectBook)="onSelectBook($event)"></ibs-shelf>
     <!-- End ShelveComponent -->
 
@@ -18,8 +18,7 @@
 
     <!-- Start BookComponent -->
     <ibs-book [book] = "selectedBook"
-              *ngIf="selectedBook; else noBookSelected"
-    ></ibs-book>
+              *ngIf="selectedBook; else noBookSelected"></ibs-book>
 
     <ng-template #noBookSelected>Please select a book</ng-template>
     <!-- End BookComponent -->

@@ -3,9 +3,18 @@
 </div>
 
 <!-- Start NavigationBar -->
-
+<div routerLinkActive class="g--12 tile bg--teal no-margin-vertical">
+  <div class="g--10 m--1 container no-margin-vertical">
+    <div class="g--3 no-margin color--white">
+      <a routerLink="books"> Books </a>
+    </div>
+    <div routerLinkActive class="g--3 no-margin color--white">
+      <a routerLink="books/new"> New </a>
+    </div>
+  </div>
+</div>
 <!-- End NavigationBar -->
 
-<div class="g--10 m--1">
-  <ibs-books></ibs-books>
+<div class="g--12">
+  <router-outlet></router-outlet>
 </div>
